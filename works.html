@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Works</title>
+  
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="stylesh.css">
+
+</head>
+<body>
+   
+<div class="container">
+
+   <h1 class="heading">My Works</h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <div class="image">
+            <img src="work1.jpg" alt="">
+         </div>
+         <div class="content">
+            <h3>ID PROCCESSING</h3>
+            <p>This is a program that let's you make an ID easily with an automatic ID Format</p>
+            <div class="icons">
+               <span> <i class="fas fa-calendar"></i> 2024</span>
+               <span> <i class="fas fa-user"></i> by Kenneth</span>
+            </div>
+         </div>
+      </div>
+
+      <div class="box">
+         <div class="image">
+            <img src="work2.jpg" alt="">
+         </div>
+         <div class="content">
+            <h3>Jumbled Word Game</h3>
+            <p>An app that let's you enjoy your free time solving jumbled words with different difficulty</p>
+            <div class="icons">
+               <span> <i class="fas fa-calendar"></i> 2024</span>
+               <span> <i class="fas fa-user"></i> by Kenneth </span>
+            </div>
+         </div>
+      </div>
+
+      <div class="box">
+         <div class="image">
+            <img src="work4.png" alt="">
+         </div>
+         <div class="content">
+            <h3>Menu System</h3>
+            <p>This is a program in which restaurant can have an automated menu system</p>
+            <div class="icons">
+               <span> <i class="fas fa-calendar"></i> 2023 </span>
+               <span> <i class="fas fa-user"></i> by Kenneth </span>
+            </div>
+         </div>
+      </div>
+
+   </div>
+   <a href="port2.html">
+   <div id="load-more"> Back </div>
+</a>
+</div>
+
+<script>
+
+let loadMoreBtn = document.querySelector('#load-more');
+let currentItem = 3;
+
+loadMoreBtn.onclick = () =>{
+   let boxes = [...document.querySelectorAll('.container .box-container .box')];
+   for (var i = currentItem; i < currentItem + 3; i++){
+      boxes[i].style.display = 'inline-block';
+   }
+   currentItem += 3;
+
+   if(currentItem >= boxes.length){
+      loadMoreBtn.style.display = 'none';
+   }
+}
+
+</script>
+
+</body>
+</html>
